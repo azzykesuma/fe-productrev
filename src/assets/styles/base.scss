@@ -1,0 +1,115 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+// Primary
+$Dark-cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+
+// Neutrals
+$Very-dark-blue: hsl(212, 21%, 14%);
+$Dark-grayish-blue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+
+body {
+    background-color: $Cream;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.card__main {
+    background-color: $White;
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .info_card {
+        padding: 20px;
+        h1 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: $Dark-grayish-blue;
+            font-weight: 500;
+        }
+        h2 {
+            font-family: 'Fraunces', sans-serif;
+            font-size: 28px;
+        }
+
+        p {
+            color: $Dark-grayish-blue;
+            line-height: 1.5;
+            font-size: 12px;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .price_discount {
+                font-family: 'Fraunces', sans-serif;
+                font-size: 28px;
+                color: $Dark-cyan;
+            }
+            .actual_price {
+                text-decoration: line-through;
+                font-size: 12px;
+                opacity: .9;
+            }
+        }
+        button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: $Dark-cyan;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            color: $White;
+            transition: background 0.3s ease-in-out;
+            cursor: pointer;
+
+            img {
+                height: 15px;
+                width: 15px;
+            }
+
+            &:hover {
+                background-color: $Very-dark-blue;
+            }
+        }
+    }
+
+    @media screen and (min-width: 990px) {
+        width: 600px;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            border-radius: 10px 0 0 10px;
+            flex-basis: 50%;
+        }
+
+        .info_card  {
+            flex-basis: 50%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
