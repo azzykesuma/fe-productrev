@@ -94,14 +94,17 @@ body {
         }
     }
 
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: 989px) {
         width: 600px;
+        height: 450px;
         flex-direction: row;
         align-items: center;
 
         img {
             border-radius: 10px 0 0 10px;
             flex-basis: 50%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .info_card  {
